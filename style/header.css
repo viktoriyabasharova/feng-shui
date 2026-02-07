@@ -1,0 +1,122 @@
+.header {
+  background: var(--white);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo:hover,
+.logo:focus {
+  color: #000000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+}
+
+.nav__link {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #000000;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+.icon-btn:hover,
+.icon-btn:focus {
+  color: #000000;
+}
+
+.icon-svg {
+  width: 26px;
+  height: 26px;
+  color: currentColor;
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav__list {
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__icons {
+    align-self: center;
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav__link {
+    font-size: 16px;
+  }
+
+  .icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+}
