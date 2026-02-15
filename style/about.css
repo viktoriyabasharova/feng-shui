@@ -1,0 +1,45 @@
+.about {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.about__header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+.about__title {
+  font-size: 28px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.about__line {
+  width: 144px;
+  height: 2px;
+  background-color: #1a1a1a;
+}
+
+.about__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  max-width: 900px;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  max-width: 1000px;
+  margin-bottom: 60px;
+}
+
+.about__image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}

@@ -53,11 +53,9 @@
 
 .products-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px 424px;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   margin-top: 60px;
-  align-content: start;
 }
 
 .product--left-top    { grid-column: 1; grid-row: 1; }
@@ -65,16 +63,19 @@
 .product--right-tall  { grid-column: 2; grid-row: 1 / 3; }
 
 .product-image-box {
+  height: 0;
+  padding-bottom: 100%;
   position: relative;
-  height: 100%;
   overflow: hidden;
 }
 
 .product-image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .product-image-box::after {
@@ -158,4 +159,119 @@
 .shop__subtitle,
 .shop__description {
   padding-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .shop {
+    padding: 100px 20px 60px;
+  }
+
+  .shop__title {
+    font-size: 32px;
+  }
+
+  .shop__subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .shop__description {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .product-info h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .product-info p,
+  .price-line {
+    font-size: 14px;
+  }
+
+  .discount {
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .shop {
+    padding: 80px 15px 50px;
+  }
+
+  .shop__title {
+    font-size: 28px;
+  }
+
+  .shop__subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .shop__description {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .product-info h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .product-info p,
+  .price-line {
+    font-size: 13px;
+  }
+
+  .discount {
+    width: 90px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .shop {
+    padding: 60px 10px 40px;
+  }
+
+  .shop__title {
+    font-size: 22px;
+  }
+
+  .shop__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .shop__description {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  .product-info h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .product-info p,
+  .price-line {
+    font-size: 12px;
+  }
+
+  .discount {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+  }
 }

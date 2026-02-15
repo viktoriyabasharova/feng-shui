@@ -84,10 +84,10 @@
   color: currentColor;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
   }
 
@@ -103,7 +103,6 @@
   }
 
   .header__icons {
-    align-self: center;
     gap: 30px;
   }
 
@@ -118,5 +117,53 @@
   .icon-svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .header__inner {
+    gap: 12px;
+  }
+
+  .nav__list {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .icon-svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__inner {
+    gap: 8px;
+  }
+
+  .nav__list {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav__link {
+    font-size: 12px;
+  }
+
+  .icon-svg {
+    width: 20px;
+    height: 20px;
   }
 }
